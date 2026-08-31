@@ -54,6 +54,10 @@ STATIC EFI_GRAPHICS_OUTPUT_MODE_INFORMATION  mQemuRamfbModeInfo[] = {
     0,    // Version
     1024, // HorizontalResolution
     768,  // VerticalResolution
+  },{
+    0,    // Version
+    1366, // HorizontalResolution
+    768,  // VerticalResolution
   }
 };
 
@@ -314,9 +318,9 @@ InitializeQemuRamfb (
   mQemuRamfbMode.FrameBufferBase = FbBase;
 
   //
-  // 800 x 600
+  // 1366 x 768
   //
-  QemuRamfbGraphicsOutputSetMode (&mQemuRamfbGraphicsOutput, 1);
+  QemuRamfbGraphicsOutputSetMode (&mQemuRamfbGraphicsOutput, 3);
 
   //
   // ramfb vendor devpath
